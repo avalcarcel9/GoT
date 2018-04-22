@@ -1,0 +1,10 @@
+Package: GoT
+Version: 0.0.1
+Title: Scrape Game of Thrones (GoT) Data
+Description: Scrapes Game of Thrones (GoT) data from multiple sources. The package can scrape scripts from episodes available on from www.genius.com. Additionally, the package can scrape character lists from http://awoiaf.westeros.org/index.php/List_of_characters and https://www.hbo.com/game-of-thrones/cast-and-crew. Lastly, the package can scrape death timeline data from https://deathtimeline.com/.
+Authors@R: c(person(given = "Alessandra",family = "Valcarcel",email = "alval@pennmedicine.com",role = c("aut","cre"))
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Maintainer: Alessandra Valcarcel <alval@pennmedicine.com>
