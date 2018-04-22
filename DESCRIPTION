@@ -8,3 +8,5 @@ Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 Maintainer: Alessandra Valcarcel <alval@pennmedicine.com>
+URL: https://github.com/avalcarcel9/GoT
+BugReports: https://github.com/avalcarcel9/GoT/issues
