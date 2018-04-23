@@ -48,6 +48,8 @@ Sys.getenv("GENIUS_API_TOKEN")
 Use
 ---
 
+For a more thorough walkthrough please see my [blog post](http://www.alessandravalcarcel.com/blog/2018-04-1-r-rmarkdown-got-scrape/).
+
 ``` r
 library(GoT)
 ```
