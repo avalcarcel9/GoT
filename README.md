@@ -1,4 +1,10 @@
 
+[![Travis build status](https://travis-ci.org/avalcarcel9/GoT.svg?branch=master)](https://travis-ci.org/avalcarcel9/GoT)
+
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/avalcarcel9/GoT?branch=master&svg=true)](https://ci.appveyor.com/project/avalcarcel9/GoT)
+
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/GoT)](https://cran.r-project.org/package=GoT)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 GoT
 ===
