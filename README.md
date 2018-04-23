@@ -1,20 +1,19 @@
-# GoT
 
-The goal of GoT is to ...
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+GoT
+===
 
-## Installation
+The goal of GoT is to help scraping some Game of Thrones data from the internet.
 
-You can install the released version of GoT from [CRAN](https://CRAN.R-project.org) with:
+Installation
+------------
 
-``` r
-install.packages("GoT")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+You can install the development version from [GitHub](https://github.com/avalcarcel9/GoT) with:
 
 ``` r
-## basic example code
+# install.packages("devtools")
+devtools::install_github("avalcarcel9/GoT")
 ```
 
+Example
+-------
