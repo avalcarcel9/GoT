@@ -6,9 +6,6 @@
 \usage{
 get_death_times()
 }
-\arguments{
-\item{filename}{path to store html file extracted}
-}
 \value{
 Returns a cleaned dataset of the deaths in GoT as a tibble
 }
@@ -17,7 +14,6 @@ Obtains GoT character deaths and times throughout series
 }
 \examples{
 \dontrun{
-filename = "frozen_death_times.html"
-cleaned_death = get_death_times(filename = filename)
+death = get_death_times()
 }
 }

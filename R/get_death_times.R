@@ -1,22 +1,23 @@
 #' @title GoT Deaths and Times
 #' @description Obtains GoT character deaths and times throughout series
-#' @param filename path to store html file extracted
-#' @export
+#' @param
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_text html_nodes
 #' @importFrom stringr str_extract str_locate str_split str_to_lower str_to_title str_trim
 #' @importFrom dplyr mutate bind_rows
+#' @export
 #' @return Returns a cleaned dataset of the deaths in GoT as a tibble
 #' @examples \dontrun{
-#' filename = "frozen_death_times.html"
-#' cleaned_death = get_death_times(filename = filename)
+#' death = get_death_times()
 #'}
 
 
 get_death_times <- function(){
 
   # Obtain Season, Episode, Character, and Time from various nodes
-  doc = xml2::read_html('data/frozen_death_times.html')
+  #
+  doc = xml2::read_html(system.file('frozen_death_times.html', package = 'GoT'))
+
   nodes = rvest::html_nodes(doc, "#main-list")
   nodes = rvest::html_nodes(nodes, "li")
   seasons = rvest::html_nodes(nodes, ".season-title")
@@ -79,13 +80,16 @@ get_death_times <- function(){
     who = stringr::str_to_title(who),
     how = stringr::str_to_lower(how),
     specific_how = stringr::str_split(how, "by", simplify = TRUE)[,2],
-    specific_how = stringr::str_to_title(str_trim(specific_how)),
+    specific_how = stringr::str_to_title(stringr::str_trim(specific_how)),
     length_string = stringr::str_length(times),
+    times = stringr::str_trim(times, side = "both"),
     times = if_else(length_string == 4,
                     paste0("00:0", times),
-                    paste0("00:", times)),
-    times = lubridate::hms(times)) %>%
+                    paste0("00:", times))) %>%
     select(-length_string)
+
+  # df$times = lubridate::hms(df$times)
+
 
   return(df)
 }
