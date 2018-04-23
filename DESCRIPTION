@@ -19,7 +19,7 @@ Imports:
   jsonlite,
   lubridate,
   tibble,
-  utils
+  magrittr
 Suggests: 
     knitr,
     rmarkdown,

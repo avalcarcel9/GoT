@@ -6,6 +6,7 @@
 #' @importFrom rvest html_text html_nodes
 #' @importFrom stringr str_extract str_locate str_split str_to_lower str_to_title str_trim
 #' @importFrom dplyr mutate bind_rows
+#' @import magrittr
 #' @return Returns a cleaned dataset of the deaths in GoT as a tibble
 #' @examples \dontrun{
 #' url = 'http://time.com/3924852/every-game-of-thrones-death/'

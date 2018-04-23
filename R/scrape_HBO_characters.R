@@ -6,6 +6,7 @@
 #' @importFrom rvest html_text html_nodes
 #' @importFrom stringr str_extract str_locate str_split str_split_fixed str_to_lower str_to_title str_trim str_replace_all str_replace
 #' @importFrom dplyr mutate
+#' @import magrittr
 #' @return Returns a cleaned dataset of the character names from HBO
 #' @examples \dontrun{
 #' url = 'https://www.hbo.com/game-of-thrones/cast-and-crew'

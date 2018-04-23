@@ -66,7 +66,7 @@ This package helps you scrape a the Game of Thrones scripts from [www.genius.com
 
 To scrape the scripts from genius you can use `GoT::scrape_GoT()`.
 
-```{r, eval = FALSE}
+```{r}
 base_url = "https://genius.com/albums/Game-of-thrones"
 info = GoT::scrape_GoT(base_url = base_url, season = 7)
 head(info)
@@ -80,7 +80,7 @@ We can also scrape character lists from two websites:
 1. [http://awoiaf.westeros.org/index.php/List_of_characters](http://awoiaf.westeros.org/index.php/List_of_characters)
 2. [https://www.hbo.com/game-of-thrones/cast-and-crew](https://www.hbo.com/game-of-thrones/cast-and-crew)
 
-```{r, eval = FALSE}
+```{r}
 # Scrape wiki characters and save
 url = "http://awoiaf.westeros.org/index.php/List_of_characters"
 wiki_characters = GoT::scrape_characters(url)
@@ -98,14 +98,14 @@ head(hbo_characters)
 
 We can also obtain death timeline data from [https://deathtimeline.com/](https://deathtimeline.com/). 
 
-```{r, eval = FALSE}
+```{r}
 death_times = GoT::get_death_times()
 head(death_times)
 ```
 
 Unfortunately, this timeline only goes up to season 6 so I'll use a this article [http://time.com/3924852/every-game-of-thrones-death/](http://time.com/3924852/every-game-of-thrones-death/) as a supplement. 
 
-```{r, eval = FALSE}
+```{r}
 url = 'http://time.com/3924852/every-game-of-thrones-death/'
 time.com_deaths = GoT::get_time.com_deaths(url = url)
 head(time.com_deaths)

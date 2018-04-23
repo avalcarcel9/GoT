@@ -5,6 +5,7 @@
 #' @export
 #' @importFrom geniusr scrape_tracklist scrape_lyrics_url
 #' @importFrom dplyr mutate rowwise group_by do ungroup
+#' @import magrittr
 #' @return Returns the dataset pulled from genius using geniusr
 #' @examples \dontrun{
 #' base_url = "https://genius.com/albums/Game-of-thrones"

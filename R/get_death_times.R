@@ -4,7 +4,8 @@
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_text html_nodes
 #' @importFrom stringr str_extract str_locate str_split str_to_lower str_to_title str_trim
-#' @importFrom dplyr mutate bind_rows
+#' @importFrom dplyr mutate bind_rows data_frame if_else select
+#' @import magrittr
 #' @export
 #' @return Returns a cleaned dataset of the deaths in GoT as a tibble
 #' @examples \dontrun{
@@ -54,7 +55,7 @@ get_death_times <- function(){
     deaths = rvest::html_nodes(titles, ".death-right")
     who = rvest::html_text(rvest::html_nodes(deaths, "h3"))
     how = rvest::html_text(rvest::html_nodes(deaths, "h4"))
-    df = data_frame(who = who, how = how, times = times)
+    df = dplyr::data_frame(who = who, how = how, times = times)
     df
   }
 
@@ -83,10 +84,10 @@ get_death_times <- function(){
     specific_how = stringr::str_to_title(stringr::str_trim(specific_how)),
     length_string = stringr::str_length(times),
     times = stringr::str_trim(times, side = "both"),
-    times = if_else(length_string == 4,
-                    paste0("00:0", times),
-                    paste0("00:", times))) %>%
-    select(-length_string)
+    times = dplyr::if_else(length_string == 4,
+                           paste0("00:0", times),
+                           paste0("00:", times))) %>%
+    dplyr::select(-length_string)
 
   # df$times = lubridate::hms(df$times)
 

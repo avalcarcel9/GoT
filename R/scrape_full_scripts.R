@@ -6,6 +6,7 @@
 #' @importFrom xml2 xml_find_all
 #' @importFrom stringr str_split str_detect
 #' @importFrom dplyr tibble
+#' @import magrittr
 #' @return Returns the dataset pulled from scraping
 #' @examples \dontrun{
 #' url = "https://genius.com/albums/Game-of-thrones"
