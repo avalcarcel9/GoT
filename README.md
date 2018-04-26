@@ -94,6 +94,22 @@ tail(info)
 
 This function will scrape all the seasons up to the season indicated as the function input.
 
+To clean this data somewhat, we can utilize `GoT::cleanGoT()`. This function generally tries to identify the speaking character and removes some of the stage direction or narration.
+
+``` r
+cleaned_data = GoT::cleanGoT(info)
+head(cleaned_data)
+#> # A tibble: 6 x 6
+#>   episode season line               speaker  action orig_line             
+#>     <dbl>  <dbl> <chr>              <chr>    <chr>  <chr>                 
+#> 1    1.00   1.00 What d’you expect… Waymar … ""     WAYMAR ROYCE: What d’…
+#> 2    1.00   1.00 I’ve never seen w… Will     ""     WILL: I’ve never seen…
+#> 3    1.00   1.00 How close did you… Waymar … ""     WAYMAR ROYCE: How clo…
+#> 4    1.00   1.00 Close as any man … Will     ""     WILL: Close as any ma…
+#> 5    1.00   1.00 We should head ba… Gared    ""     GARED: We should head…
+#> 6    1.00   1.00 Do the dead frigh… Royce    ""     ROYCE: Do the dead fr…
+```
+
 We can also scrape character lists from two websites:
 
 1.  <http://awoiaf.westeros.org/index.php/List_of_characters>
