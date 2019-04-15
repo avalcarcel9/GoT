@@ -1,6 +1,6 @@
 Package: GoT
 Title: Scrape Game of Thrones (GoT) Data
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person(given = "Alessandra",
            family = "Valcarcel",
            role = "cre",
@@ -10,23 +10,24 @@ Description: Scrapes Game of Thrones (GoT) data from multiple sources. The packa
 License: GPL-2
 LazyData: true
 Encoding: UTF-8
-Imports:
-  geniusr (>= 1.0.0),
-  stringr (>= 1.3.0),
-  rvest (>= 0.3.2),
-  xml2 (>= 1.1.1),
-  dplyr (>= 0.7.4),
-  jsonlite,
-  lubridate,
-  tibble,
-  magrittr
+Imports: 
+    dplyr (>= 0.7.4),
+    geniusr (>= 1.0.0),
+    jsonlite,
+    lubridate,
+    magrittr,
+    rvest (>= 0.3.2),
+    stringr (>= 1.3.0),
+    xml2 (>= 1.1.1),
+    textclean,
+    tibble
 Suggests: 
+    covr,
     knitr,
     rmarkdown,
-    testthat,
-    covr
+    testthat
 VignetteBuilder: knitr
 ByteCompile: true
 URL: https://github.com/avalcarcel9/GoT
 BugReports: https://github.com/avalcarcel9/GoT/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

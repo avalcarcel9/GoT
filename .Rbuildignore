@@ -1,7 +1,8 @@
-^GoT\.Rproj$
+^inst/GoT_icon\.png$
+^inst/GoT_icon\.ai$
+^inst/GoT_sticker\.R$
+^inst/GoT_sticker\.png$
+^inst/throne\.png$
+^inst/GoT_logo\.png$
+^.*\.Rproj$
 ^\.Rproj\.user$
-^README\.Rmd$
-^data-raw$
-^\.travis\.yml$
-^appveyor\.yml$
-^codecov\.yml$

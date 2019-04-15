@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# GoT
+# GoT <img src="inst/GoT_sticker.png" width = "150" align="right" />
 
 The goal of GoT is to help scraping some Game of Thrones data from the internet.
 
